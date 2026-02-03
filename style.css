@@ -1,0 +1,44 @@
+body {
+  scroll-behavior: smooth;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('hero.png') center/cover no-repeat;
+}
+
+section h2 {
+  font-weight: 700;
+}
+
+/* Overlay plein écran */
+.offers-overlay {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transition: bottom 0.6s ease-in-out;
+}
+
+/* Contenu des offres */
+.offers-content {
+  background: #fff;
+  width: 100%;
+  max-height: 90%;
+  overflow-y: auto;
+  border-radius: 20px 20px 0 0;
+  padding: 40px 20px;
+}
+
+/* Actif = visible */
+.offers-overlay.active {
+  bottom: 0;
+}
+
